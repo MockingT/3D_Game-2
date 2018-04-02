@@ -43,3 +43,19 @@
 		}  
 - 直接改变物体postion中的数值:  
 
+		using System.Collections;  
+		using System.Collections.Generic;  
+		using UnityEngine;  
+		public class NewBehaviourScript : MonoBehaviour  
+		{  
+    		public float speed = 0.01f;
+    		void Start()
+    		{
+        
+    		}
+    		void Update()
+    		{
+        		this.transform.Translate(new Vector3(Time.deltaTime * 1, 0, Time.deltaTime * (speed / 100)));
+        		// directly use "Translate" method
+    		}
+		}
