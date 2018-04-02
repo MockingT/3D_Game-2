@@ -10,9 +10,8 @@
             public class NewBehaviourScript : MonoBehaviour  
             {  
                   public float speed = 0.01f;
-                  void Start()
-                  {
-                  
+                  void Start()
+                  {
                   }
                   void Update()
                   {
