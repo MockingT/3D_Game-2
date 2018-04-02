@@ -19,7 +19,8 @@
         		Vector3 move = new Vector3(Time.deltaTime * 1, 0, Time.deltaTime * (speed / 100));
         		speed++;
         		this.transform.position += move;
-    		}
+			// add move to position
+    		}
 		}  
 - 直接改变物体postion中的数值:  
 
