@@ -29,15 +29,15 @@
 		using UnityEngine;  
 		public class NewBehaviourScript : MonoBehaviour  
 		{  
-    			public float speed = 0.01f;
-    			void Start()
-    			{
-    					    
-    			}
-    			void Update()
-    			{
-        			Vector3 move = new Vector3(Time.deltaTime * 1, 0, Time.deltaTime * (speed / 100));
-        			speed++;
-        			this.transform.position += move;
-    			}
+    		public float speed = 0.01f;
+    		void Start()
+    		{
+    				    
+    		}
+    		void Update()
+    		{
+        		Vector3 move = new Vector3(Time.deltaTime * 1, 0, Time.deltaTime * (speed / 100));
+        		speed++;
+        		this.transform.position += move;
+    		}
 		}
