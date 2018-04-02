@@ -20,6 +20,6 @@
                 this.transform.position += Vector3.up * Time.deltaTime * (speed++ / 100);
                 // go up
                 this.transform.position += Vector3.left * Time.deltaTime * 1;
-                // go left 
+                // go left  
             }
         }
