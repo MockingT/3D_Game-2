@@ -7,22 +7,19 @@
 using System.Collections;  
 using System.Collections.Generic;  
 using UnityEngine;  
-public class NewBehaviourScript : MonoBehaviour
-{
-
-    public float speed = 0.01f;
-    void Start()
-    {
+public class NewBehaviourScript : MonoBehaviour  
+{  
+    public float speed = 0.01f;  
+    void Start()  
+    {  
         
-    }
-    
-    void Update()
-    {
-
-        this.transform.position += Vector3.up * Time.deltaTime * (speed / 100);
-        // go up
-        this.transform.position += Vector3.left * Time.deltaTime * 1;
-        // go left 
-        speed++;
-    }
-}
+    }  
+    void Update()  
+    {  
+        this.transform.position += Vector3.up * Time.deltaTime * (speed / 100);  
+        // go up  
+        this.transform.position += Vector3.left * Time.deltaTime * 1;  
+        // go left  
+        speed++;  
+    }  
+}  
