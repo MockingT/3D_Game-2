@@ -59,3 +59,50 @@
         		// go left 
     		}
 		}  
+### 三. 写一个程序，实现一个完整的太阳系， 其他星球围绕太阳的转速必须不一样，且不在一个法平面上: ###  
+
+		using System.Collections;
+		using System.Collections.Generic;
+		using UnityEngine;
+
+		public class SunSystem : MonoBehaviour {
+    		public float earthSpeed = 25.0f;
+    		public float mercurySpeed = 30.0f;
+    		public float marsSpeed = 35.0f;
+    		public float jupiterSpeed = 20.0f;
+    		public float saturnSpeed = 40.0f;
+    		public float uranusSpeed = 28.0f;
+    		public float neptuneSpeed = 33.0f;
+    		public float venusSpeed = 38.0f;
+    		public float speed = 888.0f;
+    		// Use this for initialization
+    		void Start () {
+		
+			}
+	
+			// Update is called once per frame
+			void Update () {
+        		// rotate around the sun
+        		GameObject.Find("earth").transform.RotateAround(GameObject.Find("sun").transform.position, new Vector3(0, 1, 1), earthSpeed * Time.deltaTime);
+        		GameObject.Find("mercury").transform.RotateAround(GameObject.Find("sun").transform.position, new Vector3(0, 1, 2), mercurySpeed * Time.deltaTime);
+        		GameObject.Find("mars").transform.RotateAround(GameObject.Find("sun").transform.position, new Vector3(0, 1, 4), marsSpeed * Time.deltaTime);
+        		GameObject.Find("jupiter").transform.RotateAround(GameObject.Find("sun").transform.position, new Vector3(0, 1, 3), jupiterSpeed * Time.deltaTime);
+        		GameObject.Find("saturn").transform.RotateAround(GameObject.Find("sun").transform.position, new Vector3(0, 1, -2), saturnSpeed * Time.deltaTime);
+        		GameObject.Find("uranus").transform.RotateAround(GameObject.Find("sun").transform.position, new Vector3(0, 1, 5), uranusSpeed * Time.deltaTime);
+        		GameObject.Find("neptune").transform.RotateAround(GameObject.Find("sun").transform.position, new Vector3(0, 1, -1), neptuneSpeed * Time.deltaTime);
+        		GameObject.Find("venus").transform.RotateAround(GameObject.Find("sun").transform.position, new Vector3(0, 1, 2), venusSpeed * Time.deltaTime);
+
+        		// self-rotation
+        		GameObject.Find("earth").transform.Rotate(Vector3.up * Time.deltaTime * speed);
+        		GameObject.Find("mercury").transform.Rotate(Vector3.up * Time.deltaTime * speed);
+        		GameObject.Find("mars").transform.Rotate(Vector3.up * Time.deltaTime * speed);
+        		GameObject.Find("jupiter").transform.Rotate(Vector3.up * Time.deltaTime * speed);
+        		GameObject.Find("saturn").transform.Rotate(Vector3.up * Time.deltaTime * speed);
+        		GameObject.Find("uranus").transform.Rotate(Vector3.up * Time.deltaTime * speed);
+        		GameObject.Find("neptune").transform.Rotate(Vector3.up * Time.deltaTime * speed);
+        		GameObject.Find("venus").transform.Rotate(Vector3.up * Time.deltaTime * speed);
+
+		        // moon rotates around the earth
+        		GameObject.Find("moon").transform.RotateAround(GameObject.Find("earth").transform.position, new Vector3(0, 1, 2), 80 * Time.deltaTime);
+    		}
+		}
