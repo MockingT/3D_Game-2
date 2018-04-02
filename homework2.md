@@ -21,4 +21,6 @@
         		this.transform.position += Vector3.left * Time.deltaTime * 1;
         		// go left 
     		}
-		}
+		}  
+- 使用向量Vector3的方法:  
+
