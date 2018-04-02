@@ -40,4 +40,6 @@
         		speed++;
         		this.transform.position += move;
     		}
-		}
+		}  
+- 直接改变物体postion中的数值:  
+
