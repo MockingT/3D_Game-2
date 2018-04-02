@@ -11,7 +11,8 @@
             {  
                   public float speed = 0.01f;
                   void Start()
-                  {}
+                  {
+                  }
                   void Update()
                   {
                         this.transform.position += Vector3.up * Time.deltaTime * (speed++ / 100);
