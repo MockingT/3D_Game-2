@@ -141,4 +141,84 @@
 - 运行之后的界面及效果  
 ![avatar](https://github.com/MockingT/3D_Game-2/blob/master/picture/3d6.png)  
 
-- 代码部分采用MVC模式，分别有Model，Controller，View三个脚本文件，其中Controller.cs文件中引入了各个用户接口；而Model.cs文件则实现了各大类，包括牧师与魔鬼的上下船动作，船的移动以及判断输赢等，被Controller.cs中调用；最后的View.cs则是初始化界面，提供了UI，里面各个按钮供用户操作。
+- 代码部分采用MVC模式，分别有Model，Controller，View三个脚本文件，其中Controller.cs文件中引入了各个用户接口；而Model.cs文件则实现了各大类，包括牧师与魔鬼的上下船动作，船的移动以及判断输赢等，被Controller.cs中调用；最后的View.cs则是初始化界面，提供了UI，里面各个按钮供用户操作。  
+
+- View.cs具体代码:  
+
+		using System.Collections;  
+		using System.Collections.Generic;  
+		using UnityEngine;  
+		using mygame;  
+
+		public class View : MonoBehaviour {  
+
+			SSDirector one;  
+			Movement action;
+			float width;
+			float height;
+			float castw(float a)
+			{
+				return (Screen.width - width) / a;
+			}
+			float casth(float a)
+			{
+				return (Screen.height - height) / a;
+			}
+
+			// Use this for initialization  
+			void Start () {  
+				one = SSDirector.GetInstance();  
+				action = SSDirector.GetInstance() as Movement;  
+			}  
+
+			private void OnGUI()  
+			{  
+				GUI.skin.label.fontSize = 20;
+				width = Screen.width / 12;
+				height = Screen.width / 12;
+
+				if (one.state == State.Win)  
+				{  
+					if(GUI.Button(new Rect(castw(2f), casth(2f), width, height), "WIN"))  
+					{  
+						action.reset();  
+					}  
+				}  
+				if (one.state == State.Lose)  
+				{  
+					if(GUI.Button(new Rect(castw(2f), casth(2f), width, height), "LOSE"))  
+					{  
+						action.reset();  
+					}  
+				}  
+				if(GUI.Button(new Rect(castw(2f), casth(6f), width, height), "GO"))  
+				{  
+					action.boat_move();  
+				}  
+				if (GUI.Button(new Rect(castw(2.5f), casth(1f), width, height), "OFF"))  
+				{  
+					action.Left_off_boat();  
+				}  
+				if (GUI.Button(new Rect(castw(1.6f), casth(1f), width, height), "OFF"))  
+				{  
+					action.Right_off_boat();  
+				}  
+				if (GUI.Button(new Rect(castw(1.2f), casth(4f), width, height), "ON"))  
+				{  
+					action.priest_end();  
+				}  
+				if (GUI.Button(new Rect(castw(1f), casth(4f), width, height), "ON"))  
+				{  
+					action.devil_end();  
+				}  
+				if (GUI.Button(new Rect(castw(10f), casth(4f), width, height), "ON"))  
+				{  
+					action.devil_start();  
+				}  
+				if (GUI.Button(new Rect(castw(4.5f), casth(4f), width, height), "ON"))  
+				{  
+					action.priest_start();  
+				}  
+			}  
+		}  
+
