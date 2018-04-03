@@ -62,7 +62,8 @@
 ### 三. 写一个程序，实现一个完整的太阳系， 其他星球围绕太阳的转速必须不一样，且不在一个法平面上: ###  
 - 创建太阳系的GameObject（一个太阳，八大行星，一个月亮）  
 ![avatar](https://github.com/MockingT/3D_Game-2/blob/master/picture/3d2.png)  
-- 编写下面的c#代码以实现行星围绕太阳公转，行星自转以及月亮围绕地球公转:
+- 编写下面的c#代码以实现行星围绕太阳公转，行星自转以及月亮围绕地球公转:  
+其中RotateAround用于实现围绕太阳公转（三个参数分别为围绕公转点的位置，围绕公转的平面的法向量，以及速度），Rotate用于实现自转  
 
 		using System.Collections;
 		using System.Collections.Generic;
