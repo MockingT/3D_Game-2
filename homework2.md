@@ -136,5 +136,9 @@
 | 魔鬼在到达岸上船 | 船靠岸并且有空位并且有魔鬼在到达岸 |  
 
 - 预置游戏对象  
-![avatar](https://github.com/MockingT/3D_Game-2/blob/master/picture/3d5.png)
+![avatar](https://github.com/MockingT/3D_Game-2/blob/master/picture/3d5.png)  
+
+- 运行之后的界面及效果  
+![avatar](https://github.com/MockingT/3D_Game-2/blob/master/picture/3d6.png)  
+
 
