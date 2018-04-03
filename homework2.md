@@ -110,7 +110,7 @@
     		}
 		}  
 - 运行效果如下图:  
-初始情况  
+	初始情况  
 ![avatar](https://github.com/MockingT/3D_Game-2/blob/master/picture/3d4.png)  
-运行之后  
+	运行之后  
 ![avatar](https://github.com/MockingT/3D_Game-2/blob/master/picture/3d3.png)
