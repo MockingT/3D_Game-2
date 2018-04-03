@@ -109,5 +109,8 @@
         		GameObject.Find("moon").transform.RotateAround(GameObject.Find("earth").transform.position, new Vector3(0, 1, 2), 80 * Time.deltaTime);
     		}
 		}  
-- 运行效果如下图:  
+- 运行效果如下图:  
+初始情况  
+![avatar](https://github.com/MockingT/3D_Game-2/blob/master/picture/3d4.png)  
+运行之后  
 ![avatar](https://github.com/MockingT/3D_Game-2/blob/master/picture/3d3.png)
