@@ -140,6 +140,8 @@
 
 - 运行之后的界面及效果  
 ![avatar](https://github.com/MockingT/3D_Game-2/blob/master/picture/3d6.png)  
+![avatar](https://github.com/MockingT/3D_Game-2/blob/master/picture/3d7.png)  
+![avatar](https://github.com/MockingT/3D_Game-2/blob/master/picture/3d8.png)  
 
 - 代码部分采用MVC模式，分别有Model，Controller，View三个脚本文件，其中Controller.cs文件中引入了各个用户接口；而Model.cs文件则实现了各大类，包括牧师与魔鬼的上下船动作，船的移动以及判断输赢等，被Controller.cs中调用；最后的View.cs则是初始化界面，提供了UI，里面各个按钮供用户操作。  
 
