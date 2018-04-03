@@ -113,8 +113,9 @@
 - 运行效果如下图:  
 ![avatar](https://github.com/MockingT/3D_Game-2/blob/master/picture/3d4.png)  
 ![avatar](https://github.com/MockingT/3D_Game-2/blob/master/picture/3d3.png)  
-### 牧师与魔鬼 ###  
-- 游戏对象  
+### 牧师与魔鬼 ###   
+- 游戏对象  
+
 | Name | Number |
 | :-: | :-: |
 | 牧师 | 3 |
